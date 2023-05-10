@@ -14,4 +14,20 @@
 </body>
 </html>
 <div id="nao">Não</div>
+<script>
+  const nao = document.getElementById('nao');
+  let naoPosicao = 0;
+
+  nao.addEventListener('click', () => {
+    nao.style.transform = `translate(${naoPosicao}px, 0)`;
+    naoPosicao += 10;
+  });
+
+  const sim = document.getElementById('sim');
+
+  sim.addEventListener('click', () => {
+    window.location.href = 'pagina-de-presente.html';
+  });
+</script>
+
 
