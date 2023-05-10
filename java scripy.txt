@@ -1,0 +1,10 @@
+function mover() {
+	var nao = document.getElementById("nao");
+	nao.style.position = "absolute";
+	nao.style.left = Math.floor(Math.random() * 500) + "px";
+	nao.style.top = Math.floor(Math.random() * 500) + "px";
+}
+
+function redirecionar() {
+	window.location.href = "outra-pagina.html";
+}
