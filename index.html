@@ -1,8 +1,8 @@
-<link rel="stylesheet" href="assets/css/style.css">
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Minha Página</title>
+	<link rel="stylesheet" href="assets/css/style.css">
 	<script type="text/javascript" src="script.js"></script>
 </head>
 <body>
@@ -11,23 +11,23 @@
 		<button id="sim" onclick="redirecionar()">Sim</button>
 		<button id="nao" onclick="mover()">Não</button>
 	</div>
+	<script>
+	  const nao = document.getElementById('nao');
+	  let naoPosicao = 0;
+
+	  nao.addEventListener('click', () => {
+	    nao.style.transform = `translate(${naoPosicao}px, 0)`;
+	    naoPosicao += 10;
+	  });
+
+	  const sim = document.getElementById('sim');
+
+	  sim.addEventListener('click', () => {
+	    window.location.href = 'pagina-de-presente.html';
+	  });
+	</script>
 </body>
 </html>
-<div id="nao">Não</div>
-<script>
-  const nao = document.getElementById('nao');
-  let naoPosicao = 0;
 
-  nao.addEventListener('click', () => {
-    nao.style.transform = `translate(${naoPosicao}px, 0)`;
-    naoPosicao += 10;
-  });
-
-  const sim = document.getElementById('sim');
-
-  sim.addEventListener('click', () => {
-    window.location.href = 'pagina-de-presente.html';
-  });
-</script>
 
 
